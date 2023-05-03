@@ -17,6 +17,10 @@ const Query = {
 
   sayHello: (root, args, context, info) => {
     return `Hi ${args.name} GraphQL server says Hello to you!!`;
+  },
+
+  setFavouriteColor: (root, args) => {
+    return "Your Fav Color is :" + args.color;
   }
 
 };

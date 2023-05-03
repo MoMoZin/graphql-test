@@ -1,8 +1,15 @@
+enum ColorType {
+   RED
+   BLUE
+   GREEN
+}
+
 type Query {
   greeting: String
   students: [Student]
   studentById(id:ID!):Student   
   sayHello(name:String!):String
+  setFavouriteColor(color:ColorType):String
 }
 
 type Student{
