@@ -16,4 +16,12 @@ const Query = {
   }
 };
 
-module.exports = { Query };
+
+//for each single student object returned,resolver is invoked
+const Student = {
+  fullName: (root, args, context, info) => {
+    return root.firstName + ":" + root.lastName;
+  }
+};
+
+module.exports = { Query, Student };
