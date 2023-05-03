@@ -2,11 +2,11 @@
   "name": "hello-world-server",
   "private": true,
   "dependencies": {
-    "apollo-server-express": "^3.12.0",
-    "body-parser": "^1.20.2",
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "graphql": "^16.6.0",
-    "graphql-tools": "^8.3.20"
+    "apollo-server-express": "^1.4.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "graphql": "^0.13.2",
+    "graphql-tools": "^3.1.1"
   }
 }
