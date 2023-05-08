@@ -3,6 +3,7 @@ type Query {
 }
 
 type Mutation {
+  # use the input type SignUpInput to reduce the number of parameters in signUp function
    signUp(input:SignUpInput):String
 }
 
