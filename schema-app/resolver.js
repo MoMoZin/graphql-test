@@ -3,30 +3,11 @@ const Query = {
   //resolver function for greeting
   greeting: () => {
     return "Hello from Mo's first schema project!";
-
   },
 
   studentById: (root, args, context, info) => {
     return db.students.get(args.id);
   }
-
-  // //resolver function for students returns list
-  // students: () => db.students.list(),
-
-  // //resolver function for studentbyId
-  // studentById: (rrot, args, context, info) => {
-  //   //args will contain parameter passed in query
-  //   return db.students.get(args.id);
-  // },
-
-  // sayHello: (root, args, context, info) => {
-  //   return `Hi ${args.name} GraphQL server says Hello to you!!`;
-  // },
-
-  // setFavouriteColor: (root, args) => {
-  //   return "Your Fav Color is :" + args.color;
-  // }
-
 };
 
 const Mutation = {
@@ -36,20 +17,25 @@ const Mutation = {
       firstName: args.firstName,
       lastName: args.lastName
     });
+  },
+
+  // new resolver function
+  addStudent_returns_object: (root, args, context, info) => {
+    const id = db.students.create({
+      collegeId: args.collegeId,
+      firstName: args.firstName,
+      lastName: args.lastName
+    });
+
+    return db.students.get(id);
   }
 };
 
+//for each single student object returned,resolver is invoked
+const Student = {
+  college: (root) => {
+    return db.colleges.get(root.collegeId);
+  }
+};
 
-
-// //for each single student object returned,resolver is invoked
-// const Student = {
-//   fullName: (root, args, context, info) => {
-//     return root.firstName + ":" + root.lastName;
-//   },
-//   college: (root) => {
-//     return db.colleges.get(root.collegeId);
-//   }
-// };
-
-// module.exports = { Query, Student };
-module.exports = { Query, Mutation };
+module.exports = { Query, Student, Mutation };

@@ -15,21 +15,20 @@ type Query {
 
 type Mutation {
   createStudent(collegeId:ID,firstName:String,lastName:String):String
+
+  addStudent_returns_object(collegeId:ID,firstName:String,lastName:String):Student
 }
 
-type Student{
-  id: ID!
-  firstName: String
-  lastName: String
-  # password: String
-  collegeId: String  
-  # college:College
-  # fullName:String 
+type College {
+   id:ID!
+   name:String
+   location:String
+   rating:Float
 }
 
-# type College {
-#    id:ID!
-#    name:String
-#    location:String
-#    rating:Float
-# }
+type Student {
+   id:ID!
+   firstName:String
+   lastName:String
+   college:College
+}
