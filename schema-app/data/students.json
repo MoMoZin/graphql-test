@@ -22,5 +22,11 @@
     "lastName": "Panigrahi",
     "password": "pass123",
     "collegeId": "col-101"
+  },
+  {
+    "id": "SyovKJIE2",
+    "collegeId": "col-2",
+    "firstName": "Tim",
+    "lastName": "George"
   }
 ]

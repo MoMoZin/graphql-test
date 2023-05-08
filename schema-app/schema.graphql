@@ -6,29 +6,29 @@ enum ColorType {
 
 type Query {
   greeting: String
-  students: [Student]
-  studentById(id:ID!):Student   
-  sayHello(name:String!):String
-  setFavouriteColor(color:ColorType):String
+  # students: [Student]
+  # studentById(id:ID!):Student   
+  # sayHello(name:String!):String
+  # setFavouriteColor(color:ColorType):String
 }
 
 type Mutation {
   createStudent(collegeId:ID,firstName:String,lastName:String):String
 }
 
-type Student{
-  id: ID!
-  firstName: String
-  lastName: String
-  password: String
-  # collegeId: String  
-  college:College
-  fullName:String 
-}
+# type Student{
+#   id: ID!
+#   firstName: String
+#   lastName: String
+#   password: String
+#   # collegeId: String  
+#   college:College
+#   fullName:String 
+# }
 
-type College {
-   id:ID!
-   name:String
-   location:String
-   rating:Float
-}
+# type College {
+#    id:ID!
+#    name:String
+#    location:String
+#    rating:Float
+# }
