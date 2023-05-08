@@ -6,6 +6,10 @@ const Query = {
 
   },
 
+  studentById: (root, args, context, info) => {
+    return db.students.get(args.id);
+  }
+
   // //resolver function for students returns list
   // students: () => db.students.list(),
 
