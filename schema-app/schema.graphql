@@ -12,6 +12,10 @@ type Query {
   setFavouriteColor(color:ColorType):String
 }
 
+type Mutation {
+  createStudent(collegeId:ID,firstName:String,lastName:String):String
+}
+
 type Student{
   id: ID!
   firstName: String
